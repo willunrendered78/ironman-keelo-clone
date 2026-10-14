@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { min-height: 100%; }
+  body { @apply bg-ink text-white font-sans antialiased; }
+  button { @apply cursor-pointer; }
+  input, select, textarea { @apply bg-ink border border-line text-white px-3 py-2 outline-none focus:border-white w-full; }
+  ::selection { @apply bg-white text-ink; }
+}
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 px-5 py-3 text-xs font-bold uppercase tracking-[0.18em] border border-white bg-white text-ink hover:bg-ink hover:text-white transition-colors disabled:opacity-40 disabled:pointer-events-none; }
+  .btn-ghost { @apply btn bg-transparent text-white border-line hover:border-white hover:bg-transparent; }
+  .label { @apply text-[10px] font-bold uppercase tracking-[0.25em] text-mute; }
+  .card { @apply bg-smoke border border-line; }
+}
